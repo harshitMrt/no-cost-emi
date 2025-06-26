@@ -1,0 +1,106 @@
+.EmiTable {
+  text-align: center;
+}
+
+.EmiTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.EmiTable th,
+.EmiTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+.EmiTable th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.EmiTable tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping */
+}
+
+.EmiTable tr:hover {
+  background-color: #e0f3ff; /* Highlight row on hover */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .EmiTable {
+    font-size: 14px; /* Reduce font size on small screens */
+  }
+
+  .EmiTable th,
+  .EmiTable td {
+    padding: 8px;
+  }
+}
+
+.pdf-btn:hover {
+  background-color: #a71d2a;
+}
+
+.download-btn {
+  padding: 12px 30px; /* More horizontal space */
+  font-size: 16px; /* Proper font size */
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from breaking */
+  overflow: hidden; /* Prevents content overflow */
+  text-overflow: ellipsis; /* If text is too long, it will show "..." */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px; /* Ensures button doesn't shrink too much */
+  max-width: 250px; /* Prevents excessive stretching */
+}
+
+.download-btn:hover {
+  opacity: 0.85;
+}
+
+.pdf-btn {
+  background-color: #e74c3c; /* Red for PDF */
+  color: white;
+}
+
+.download-btn:not(.pdf-btn) {
+  background-color: #2ecc71; /* Green for Excel */
+  color: white;
+}
+
+/* Center the button group below the table */
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px; /* Adds spacing between buttons */
+  flex-wrap: wrap;
+}
+
+.EMITable {
+  padding-left: 200px;
+  padding-right: 200px;
+}

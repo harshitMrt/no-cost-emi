@@ -1,0 +1,26 @@
+.example-container {
+  background: #f3dada;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.example-container h2 {
+  color: #ff6f61;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.example-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.example-container ul li {
+  background: #fff;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

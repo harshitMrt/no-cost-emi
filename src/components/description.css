@@ -1,0 +1,29 @@
+.description-container {
+  background: #f3d4d4;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.description-container h2 {
+  color: #e63946;
+  text-align: center;
+}
+
+.description-container h3 {
+  color: #333;
+  margin-top: 15px;
+}
+z .description-container ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.description-container ul li {
+  background: #ffebeb;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

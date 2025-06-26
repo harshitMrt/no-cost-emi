@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #ffffffec;
+}
+
+.InputFieldsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+}
+
+.InputFieldsDiv label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.InputFieldsDiv input {
+  width: 140px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background: #f8f8f8;
+  transition: 0.3s;
+}
+
+.InputFieldsDiv input:focus {
+  border-color: #007bff;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+.ResultDiv {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #28a745;
+  border-radius: 5px;
+  background-color: #e9f7ef;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 7px 0;
+  color: #28a745;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+
+body {
+  background-color: #f4f8ff; /* Light Blueish Background */
+}
+
+.InputFieldsDiv input:focus {
+  border-color: #0056b3;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 91, 187, 0.5);
+}
+
+.ResultDiv {
+  border: 1px solid #0056b3;
+  background-color: #e9f2ff;
+}
+
+p {
+  color: #0056b3;
+}
+
+/* From Uiverse.io by Mhyar-nsi */
+button {
+  background-color: #abcbfe;
+  color: #3b82f6;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 150px;
+  height: 50px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px; /* Optional: space above the button */
+}
+
+.button-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
