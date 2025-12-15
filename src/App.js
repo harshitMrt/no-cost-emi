@@ -7,6 +7,9 @@ import Example from "./components/example";
 import Comparison from "./components/nocostVcost";
 import "./App.css";
 import { useEffect } from "react";
+import LandingPage from "./components/LandingPage";
+import Header from "./components/Header";
+import NoCostEMIPages from "./components/NoCostEmiPage.jsx";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -26,20 +29,21 @@ function App() {
 
   const calculateInterestBasedEMI = () => {
     if (!costOfAsset || !rate || !tenure) return;
-  
+
     const principal = costOfAsset;
     const monthlyRate = rate / 12 / 100;
-  
-    const emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) /
-                (Math.pow(1 + monthlyRate, tenure) - 1);
-  
+
+    const emi =
+      (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) /
+      (Math.pow(1 + monthlyRate, tenure) - 1);
+
     const totalWithInterest = emi * tenure;
-    
+
     const rounded = Math.round(totalWithInterest);
     console.log(rounded, emi, updatedCostOfAsset);
-  
+
     const savings = (rounded - updatedCostOfAsset - downPayment).toFixed(2);
-setSavings(savings);
+    setSavings(savings);
   };
 
   useEffect(() => {
@@ -48,10 +52,13 @@ setSavings(savings);
     }
   }, [updatedCostOfAsset, costOfAsset, tenure, rate]);
 
-
-
   return (
     <div className="maindiv">
+      <Header />
+      <div>
+        <LandingPage />
+      </div>
+      <NoCostEMIPages />
       <NoCostEMI
         setCostOfAsset={setCostOfAsset}
         costOfAsset={costOfAsset}
@@ -68,22 +75,32 @@ setSavings(savings);
         setDownPayment={setDownPayment}
       />
 
-{savings > 0 && (
-  <div style={{ backgroundColor: "#d4edda", padding: "12px", margin: "16px 0", borderRadius: "8px", color: "#155724", fontWeight: "bold" }}>
-    🎉 You save ₹{savings} by choosing No-Cost EMI instead of Interest-Based EMI!
-  </div>
-)}
+      {savings > 0 && (
+        <div
+          style={{
+            backgroundColor: "#d4edda",
+            padding: "12px",
+            margin: "16px 0",
+            borderRadius: "8px",
+            color: "#155724",
+            fontWeight: "bold",
+          }}
+        >
+          🎉 You save ₹{savings} by choosing No-Cost EMI instead of
+          Interest-Based EMI!
+        </div>
+      )}
 
       {isFullyPaid ? (
         <p style={{ color: "red", fontWeight: "bold" }}>
-          You already paid the full cost of the asset as Down Payment. No EMI required.
+          You already paid the full cost of the asset as Down Payment. No EMI
+          required.
         </p>
       ) : (
-        show && updatedCostOfAsset > 0 && (
+        show &&
+        updatedCostOfAsset > 0 && (
           <>
-            <Comparison
-            
-            />                       
+            <Comparison />
             <FinalTable
               downPayment={downPayment}
               costOfAsset={costOfAsset}
@@ -111,8 +128,8 @@ setSavings(savings);
         )
       )}
 
-      {show && <Description />}
-      {show && <Example />}
+      {/* {show && <Description />}
+      {show && <Example />} */}
     </div>
   );
 }

@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: #ffffff;
+  color: #ffffff;
 }
 
 .App-logo {
@@ -30,4 +32,31 @@
   letter-spacing: 1.5px; /* Spacing for better readability */
   text-transform: uppercase; /* Uppercase for a bold effect */
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Stylish text shadow */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* Scroll container */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+/* Each page */
+.snap-page {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+body {
+  background: #feffff;
+  color: #e5e7eb;
 }
