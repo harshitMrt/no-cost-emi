@@ -1,0 +1,110 @@
+.emi-container {
+  padding: 80px 6%;
+  font-family: "Inter", sans-serif;
+}
+
+.emi-intro {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.emi-intro h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+}
+
+.emi-intro p {
+  color: #4a70a9;
+  font-size: 18px;
+}
+
+.emi-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature-card {
+  background: #efece3;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card .icon {
+  font-size: 28px;
+}
+
+.emi-steps {
+  background-color: #efece3;
+  padding: 40px;
+  border-radius: 40px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.step-circle {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  background: #6c63ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* CATEGORIES */
+.emi-categories {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.category-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+
+.category-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tags span {
+  background: #e6f2ff;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.tags {
+  margin-top: 18px;
+}

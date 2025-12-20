@@ -18,7 +18,6 @@
 .heading {
   background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradient Pink */
   text-align: center; /* Center the text */
-  padding: 20px; /* Add spacing */
   border-radius: 12px; /* Rounded corners */
   margin-bottom: 20px; /* Space below the heading */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
@@ -59,4 +58,10 @@ body {
 body {
   background: #feffff;
   color: #e5e7eb;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

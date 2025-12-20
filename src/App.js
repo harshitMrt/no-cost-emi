@@ -9,7 +9,8 @@ import "./App.css";
 import { useEffect } from "react";
 import LandingPage from "./components/LandingPage";
 import Header from "./components/Header";
-import NoCostEMIPages from "./components/NoCostEmiPage.jsx";
+import NoCostEmiSection from "./components/NoCostEmiSection";
+import Footer from "./components/Footer";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -58,7 +59,6 @@ function App() {
       <div>
         <LandingPage />
       </div>
-      <NoCostEMIPages />
       <NoCostEMI
         setCostOfAsset={setCostOfAsset}
         costOfAsset={costOfAsset}
@@ -128,8 +128,11 @@ function App() {
         )
       )}
 
+      <NoCostEmiSection />
+
       {/* {show && <Description />}
       {show && <Example />} */}
+      <Footer />
     </div>
   );
 }
