@@ -23,6 +23,7 @@
   font-weight: 600;
   font-family: "apple-system", sans-serif;
   color: #212121;
+  padding-left: 0px;
 }
 
 /* Right nav */
@@ -53,4 +54,8 @@
   color: #000;
   font-weight: 600;
   cursor: pointer;
+}
+
+.header-left {
+  left: 100px;
 }

@@ -29,6 +29,12 @@ export default function FinalTable({
       ? parseFloat(processingFee) + parseFloat(GSTProcessingFee)
       : 0);
 
+  const formatNumber = (value) =>
+    new Intl.NumberFormat("en-IN", {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2,
+    }).format(Number(value) || 0);
+
   return (
     <div className="EMITable">
       <h2>Final Expenses</h2>
@@ -44,11 +50,11 @@ export default function FinalTable({
         </thead>
         <tbody>
           <tr>
-            <td>{interest}</td>
-            <td>{GSTInterest}</td>
-            {processingFee > 0 && <td>{processingFee}</td>}
-            {processingFee > 0 && <td>{GSTProcessingFee}</td>}
-            <td>{totalAmount.toFixed(2)}</td>
+            <td>₹ {formatNumber(interest)}</td>
+            <td>₹ {formatNumber(GSTInterest)}</td>
+            {processingFee > 0 && <td>₹ {formatNumber(processingFee)}</td>}
+            {processingFee > 0 && <td>₹ {formatNumber(GSTProcessingFee)}</td>}
+            <td>₹ {formatNumber(totalAmount.toFixed(2))}</td>
           </tr>
         </tbody>
       </table>

@@ -5,7 +5,7 @@ export default function Header() {
     <header className="app-header">
       {/* Left */}
       <div className="header-left">
-        <span className="brand-name">𝐌𝐨𝐧𝐞𝐲𝐒𝐜𝐨𝐩𝐞</span>
+        <span className="brand-name">𝐄𝐌𝐈𝐥𝐲 ( 𝐘𝐨𝐮𝐫 𝐄𝐌𝐈 𝐆𝐮𝐢𝐝𝐞 )</span>
       </div>
 
       {/* Right */}

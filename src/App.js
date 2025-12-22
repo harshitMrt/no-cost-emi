@@ -11,6 +11,7 @@ import LandingPage from "./components/LandingPage";
 import Header from "./components/Header";
 import NoCostEmiSection from "./components/NoCostEmiSection";
 import Footer from "./components/Footer";
+import EMIComparison from "./components/EMIComparison";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -27,6 +28,14 @@ function App() {
   const [savings, setSavings] = useState(0);
 
   const isFullyPaid = downPayment && costOfAsset && downPayment >= costOfAsset;
+
+  let GSTProcessingFee = processingFee
+    ? ((18 * processingFee) / 100).toFixed(2)
+    : 0;
+
+  let amount = costOfAsset;
+  let interest = (amount - updatedCostOfAsset).toFixed(2);
+  let GSTInterest = ((18 * interest) / 100).toFixed(2);
 
   const calculateInterestBasedEMI = () => {
     if (!costOfAsset || !rate || !tenure) return;
@@ -56,40 +65,37 @@ function App() {
   return (
     <div className="maindiv">
       <Header />
-      <div>
+      <main>
         <LandingPage />
+      </main>
+      <div className="top-section">
+        <NoCostEMI
+          setCostOfAsset={setCostOfAsset}
+          costOfAsset={costOfAsset}
+          gst={gst}
+          setGST={setGST}
+          tenure={tenure}
+          setTenure={setTenure}
+          rate={rate}
+          setRate={setRate}
+          processingFee={processingFee}
+          setProcessingFee={setProcessingFee}
+          setUpdatedCostOfAsset={setUpdatedCostOfAsset}
+          downPayment={downPayment}
+          setDownPayment={setDownPayment}
+        />
+        <EMIComparison
+          costOfAsset={costOfAsset}
+          updatedCostOfAsset={updatedCostOfAsset}
+          tenure={tenure}
+          rate={rate}
+          processingFee={processingFee}
+          gst={gst}
+          interest={interest}
+          GSTInterest={GSTInterest}
+          GSTProcessingFee={GSTProcessingFee}
+        />
       </div>
-      <NoCostEMI
-        setCostOfAsset={setCostOfAsset}
-        costOfAsset={costOfAsset}
-        gst={gst}
-        setGST={setGST}
-        tenure={tenure}
-        setTenure={setTenure}
-        rate={rate}
-        setRate={setRate}
-        processingFee={processingFee}
-        setProcessingFee={setProcessingFee}
-        setUpdatedCostOfAsset={setUpdatedCostOfAsset}
-        downPayment={downPayment}
-        setDownPayment={setDownPayment}
-      />
-
-      {savings > 0 && (
-        <div
-          style={{
-            backgroundColor: "#d4edda",
-            padding: "12px",
-            margin: "16px 0",
-            borderRadius: "8px",
-            color: "#155724",
-            fontWeight: "bold",
-          }}
-        >
-          🎉 You save ₹{savings} by choosing No-Cost EMI instead of
-          Interest-Based EMI!
-        </div>
-      )}
 
       {isFullyPaid ? (
         <p style={{ color: "red", fontWeight: "bold" }}>
@@ -129,9 +135,6 @@ function App() {
       )}
 
       <NoCostEmiSection />
-
-      {/* {show && <Description />}
-      {show && <Example />} */}
       <Footer />
     </div>
   );

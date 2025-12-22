@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { FaLinkedin, FaTwitter, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -49,10 +50,33 @@ const Footer = () => {
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} MoneyScope. All rights reserved.</p>
         <div className="socials">
-          <span>🌐</span>
-          <span>🐦</span>
-          <span>📘</span>
-          <span>📸</span>
+          <a
+            href="https://www.linkedin.com/in/harshit-chaudhary-992971286/?originalSubdomain=in"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://twitter.com/hritikgulia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter />
+          </a>
+
+          <a href="mailto:support@moneyscope.com">
+            <FaEnvelope />
+          </a>
+
+          <a
+            href="https://wa.me/7668622899"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
         </div>
       </div>
     </div>

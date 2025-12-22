@@ -1,4 +1,7 @@
 import "./NoCostEmiSection.css";
+import phone from "../phone.jpeg";
+import paper from "../paper.jpeg";
+import house from "../house.jpeg";
 
 const NoCostEmiSection = () => {
   return (
@@ -43,10 +46,7 @@ const NoCostEmiSection = () => {
 
         <div className="category-grid">
           <div className="category-card">
-            <img
-              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
-              alt="Smartphones"
-            />
+            <img src={phone} alt="Smartphones" />
 
             <h3>Smartphones & Accessories</h3>
             <p>Phones, earbuds and tech accessories</p>
@@ -57,10 +57,7 @@ const NoCostEmiSection = () => {
           </div>
 
           <div className="category-card">
-            <img
-              src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e"
-              alt="Electronics"
-            />
+            <img src={paper} alt="Electronics" />
 
             <h3>Electronics & Appliances</h3>
             <p>TVs, laptops, appliances, and gadgets</p>
@@ -71,10 +68,7 @@ const NoCostEmiSection = () => {
           </div>
 
           <div className="category-card">
-            <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-              alt="Furniture"
-            />
+            <img src={house} alt="Furniture" />
 
             <h3>Furniture & Home Decor</h3>
             <p>furniture, decor items, and essentials</p>

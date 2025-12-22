@@ -119,6 +119,12 @@ export default function EmiTable({
     doc.save("EMI_Schedule.pdf");
   };
 
+  const formatNumber = (value) =>
+    new Intl.NumberFormat("en-IN", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(Number(value) || 0);
+
   return (
     <div className="EMITable">
       <h2>EMI Schedule</h2>
@@ -138,12 +144,12 @@ export default function EmiTable({
           {emiTable.map((row, index) => (
             <tr key={index}>
               <td>{row.month}</td>
-              <td>{row.remainingBalance}</td>
-              <td>{row.principalRepaid}</td>
-              <td>{row.interestPaid}</td>
-              <td>{row.gstOnInterest}</td>
-              <td>{row.gstProcessingFee}</td>
-              <td>{row.totalMonthlyPayment}</td>
+              <td>₹ {formatNumber(row.remainingBalance)}</td>
+              <td>₹ {formatNumber(row.principalRepaid)}</td>
+              <td>₹ {formatNumber(row.interestPaid)}</td>
+              <td>₹ {formatNumber(row.gstOnInterest)}</td>
+              <td>₹ {formatNumber(row.gstProcessingFee)}</td>
+              <td>₹ {formatNumber(row.totalMonthlyPayment)}</td>
             </tr>
           ))}
         </tbody>
