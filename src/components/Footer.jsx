@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h2>MoneyScope</h2>
+          <h2>𝐄𝐌𝐈𝐥𝐲</h2>
           <p>
             Making premium purchases affordable with smart, secure, and
             interest-free EMI solutions.
@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} MoneyScope. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} EMIly. All rights reserved.</p>
         <div className="socials">
           <a
             href="https://www.linkedin.com/in/harshit-chaudhary-992971286/?originalSubdomain=in"

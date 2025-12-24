@@ -59,3 +59,86 @@
 .header-left {
   left: 100px;
 }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Nav links */
+.header-right a {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1f2937;
+  text-decoration: none;
+  padding: 6px 2px;
+  transition: color 0.25s ease;
+}
+
+/* Hover underline animation */
+.header-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.25s ease;
+  border-radius: 2px;
+}
+
+.header-right a:hover {
+  color: #2563eb;
+}
+
+.header-right a:hover::after {
+  width: 100%;
+}
+
+/* Active link (optional manual class) */
+.header-right a.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.header-right a.active::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-right {
+    gap: 18px;
+  }
+
+  .header-right a {
+    font-size: 14px;
+  }
+}
+
+/* Header when scrolled */
+.app-header.scrolled {
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* Brand animation */
+.app-header.scrolled .brand-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #0f172a;
+  transition: all 0.3s ease;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  transition: all 0.3s ease;
+}

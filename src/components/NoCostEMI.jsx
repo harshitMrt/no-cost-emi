@@ -44,7 +44,7 @@ export default function NoCostEMI({
   };
 
   return (
-    <>
+    <section id="calculator" className="calculator-section">
       <div className="InputFieldsDiv">
         <div>
           <label>Cost of Asset:</label>
@@ -56,6 +56,7 @@ export default function NoCostEMI({
             onChange={(e) => setCostOfAsset(Number(e.target.value))}
           />
         </div>
+
         <div>
           <label>Down Payment:</label>
           <input
@@ -66,6 +67,7 @@ export default function NoCostEMI({
             onChange={(e) => setDownPayment(Number(e.target.value))}
           />
         </div>
+
         <div>
           <label>GST (%):</label>
           <input
@@ -76,6 +78,7 @@ export default function NoCostEMI({
             onChange={(e) => setGST(Number(e.target.value))}
           />
         </div>
+
         <div>
           <label>Tenure (Months):</label>
           <input
@@ -87,6 +90,7 @@ export default function NoCostEMI({
             onChange={(e) => setTenure(Number(e.target.value))}
           />
         </div>
+
         <div>
           <label>Rate of Interest (%):</label>
           <input
@@ -97,6 +101,7 @@ export default function NoCostEMI({
             onChange={(e) => setRate(Number(e.target.value))}
           />
         </div>
+
         <div>
           <label>Processing Fee:</label>
           <input
@@ -104,17 +109,14 @@ export default function NoCostEMI({
             className="input"
             min={0}
             value={processingFee}
-            onChange={(e) => {
-              setProcessingFee(Number(e.target.value));
-            }}
+            onChange={(e) => setProcessingFee(Number(e.target.value))}
           />
         </div>
+
         <div className="button-container">
-          <button onClick={calculateEMI} role="button">
-            Calculate EMI
-          </button>
+          <button onClick={calculateEMI}>Calculate EMI</button>
         </div>
       </div>
-    </>
+    </section>
   );
 }

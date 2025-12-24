@@ -5,7 +5,7 @@ import house from "../house.jpeg";
 
 const NoCostEmiSection = () => {
   return (
-    <div className="emi-container">
+    <div id="what-is-nocost" className="emi-container">
       {/* WHAT IS NO-COST EMI */}
       <section className="emi-intro">
         <h1>What is No-Cost EMI?</h1>
@@ -76,37 +76,6 @@ const NoCostEmiSection = () => {
               <span>Easy Returns</span>
               <span>Quality Assured</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="emi-steps">
-        <h2>How Does It Work?</h2>
-
-        <div className="steps-grid">
-          <div className="step">
-            <div className="step-circle">1</div>
-            <h4>Choose Your Product</h4>
-            <p>Select any eligible product and choose no-cost EMI</p>
-          </div>
-
-          <div className="step">
-            <div className="step-circle">2</div>
-            <h4>Select Tenure</h4>
-            <p>Pick your preferred repayment period (3–24 months)</p>
-          </div>
-
-          <div className="step">
-            <div className="step-circle">3</div>
-            <h4>Instant Approval</h4>
-            <p>Get instant approval with minimal documentation</p>
-          </div>
-
-          <div className="step">
-            <div className="step-circle">4</div>
-            <h4>Start Shopping</h4>
-            <p>Receive your product and pay EMIs monthly</p>
           </div>
         </div>
       </section>

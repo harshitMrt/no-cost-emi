@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import NoCostEMI from "./components/NoCostEMI";
 import EmiTable from "./components/EMItable";
-import FinalTable from "./components/FinalData";
+// import FinalTable from "./components/FinalData";
 import Description from "./components/description";
 import Example from "./components/example";
 import Comparison from "./components/nocostVcost";
@@ -12,6 +12,8 @@ import Header from "./components/Header";
 import NoCostEmiSection from "./components/NoCostEmiSection";
 import Footer from "./components/Footer";
 import EMIComparison from "./components/EMIComparison";
+import Benefits from "./components/Benefits";
+import HowItWorks from "./components/HowItWorks";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -65,9 +67,15 @@ function App() {
   return (
     <div className="maindiv">
       <Header />
+
       <main>
         <LandingPage />
       </main>
+
+      {/* 1️⃣ What is No-Cost EMI */}
+      <NoCostEmiSection />
+
+      {/* 2️⃣ Calculator */}
       <div className="top-section">
         <NoCostEMI
           setCostOfAsset={setCostOfAsset}
@@ -84,6 +92,7 @@ function App() {
           downPayment={downPayment}
           setDownPayment={setDownPayment}
         />
+
         <EMIComparison
           costOfAsset={costOfAsset}
           updatedCostOfAsset={updatedCostOfAsset}
@@ -97,6 +106,7 @@ function App() {
         />
       </div>
 
+      {/* 3️⃣ Results */}
       {isFullyPaid ? (
         <p style={{ color: "red", fontWeight: "bold" }}>
           You already paid the full cost of the asset as Down Payment. No EMI
@@ -107,16 +117,6 @@ function App() {
         updatedCostOfAsset > 0 && (
           <>
             <Comparison />
-            <FinalTable
-              downPayment={downPayment}
-              costOfAsset={costOfAsset}
-              gst={gst}
-              tenure={tenure}
-              rate={rate}
-              processingFee={processingFee}
-              updatedCostOfAsset={updatedCostOfAsset}
-              emiTable={emiTable}
-            />
             <EmiTable
               downPayment={downPayment}
               costOfAsset={costOfAsset}
@@ -134,7 +134,13 @@ function App() {
         )
       )}
 
-      <NoCostEmiSection />
+      {/* 4️⃣ How it works */}
+      <Example />
+      <HowItWorks />
+
+      {/* 5️⃣ Benefits */}
+      <Benefits />
+
       <Footer />
     </div>
   );

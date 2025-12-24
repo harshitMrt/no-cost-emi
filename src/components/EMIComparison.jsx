@@ -108,7 +108,9 @@ export default function EMIComparison({
 
       {/* Savings */}
       <div className="savings-box">
-        💰 You Save <span>₹{format(savings > 0 ? savings : 0)}</span>
+        <span>
+          💰 Save ₹{format(savings > 0 ? savings : 0)} with No-Cost EMI
+        </span>
       </div>
     </div>
   );

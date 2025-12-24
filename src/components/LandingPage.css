@@ -15,6 +15,9 @@ body {
   background: transparent; /* inherit body background */
 }
 
+.landing-page {
+  min-height: 100vh;
+}
 /* Headings */
 .landing-page h4 {
   color: #000000; /* soft gray */

@@ -1,0 +1,51 @@
+--> Affordability Checker
+
+User inputs:
+	•	Monthly income
+	•	Fixed expenses
+
+System shows:
+	•	Safe EMI limit
+	•	Warning if EMI > 30–40% income
+
+
+--> Down-Payment Optimizer
+	•	Slider adjusts down payment
+	•	Shows:
+	•	EMI reduction
+	•	Best down-payment suggestion
+
+--> EMI Tenure Optimizer
+	•	“Best tenure” based on:
+	•	Income
+	•	Cost
+	•	Interest rate
+	•	Short vs long-term impact
+
+--> Bank / Card Offer Comparison
+	•	Compare offers from:
+	•	Credit cards
+	•	NBFCs
+	•	Filters:
+	•	Processing fee
+	•	GST
+	•	Tenure
+
+--> Natural Language Input
+
+User types:
+
+“Phone worth 50k, 12 months EMI, no down payment”
+
+App auto-fills form 🔥
+
+--> Shareable EMI Report
+	•	Generate:
+	•	Shareable link
+	•	WhatsApp-ready summary
+	•	PDF download
+
+-->  Multi-Currency Support
+	•	INR, USD, EUR
+	•	Useful for international purchases
+
