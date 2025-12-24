@@ -32,6 +32,44 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* Share Buttons */
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.share-btn:hover {
+  opacity: 0.8;
+}
+
+.share-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+}
+
+.pdf-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
 /* Responsive Styling */
 @media (max-width: 768px) {
   table {
@@ -41,5 +79,14 @@ h2 {
   th,
   td {
     padding: 8px;
+  }
+
+  .share-buttons {
+    gap: 10px;
+  }
+
+  .share-btn {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }

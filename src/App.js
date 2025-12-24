@@ -13,6 +13,7 @@ import Footer from "./NoCostEMI/components/Footer";
 import EMIComparison from "./NoCostEMI/components/EMIComparison";
 import Benefits from "./NoCostEMI/components/Benefits";
 import HowItWorks from "./NoCostEMI/components/HowItWorks";
+import FinalData from "./NoCostEMI/components/FinalData";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -64,6 +65,32 @@ function App() {
       calculateInterestBasedEMI();
     }
   }, [updatedCostOfAsset, costOfAsset, tenure, rate]);
+
+  // Load data from URL params for shareable links
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has("costOfAsset")) {
+      setCostOfAsset(urlParams.get("costOfAsset"));
+    }
+    if (urlParams.has("downPayment")) {
+      setDownPayment(urlParams.get("downPayment"));
+    }
+    if (urlParams.has("tenure")) {
+      setTenure(urlParams.get("tenure"));
+    }
+    if (urlParams.has("rate")) {
+      setRate(urlParams.get("rate"));
+    }
+    if (urlParams.has("gst")) {
+      setGST(urlParams.get("gst"));
+    }
+    if (urlParams.has("processingFee")) {
+      setProcessingFee(urlParams.get("processingFee"));
+    }
+    if (urlParams.has("updatedCostOfAsset")) {
+      setUpdatedCostOfAsset(urlParams.get("updatedCostOfAsset"));
+    }
+  }, []);
 
   return (
     <div className="maindiv">
@@ -133,6 +160,16 @@ function App() {
               emiTable={emiTable}
               processingFee={processingFee}
               setEmiTable={setEmiTable}
+            />
+            <FinalData
+              costOfAsset={costOfAsset}
+              processingFee={processingFee}
+              updatedCostOfAsset={updatedCostOfAsset}
+              downPayment={downPayment}
+              tenure={tenure}
+              rate={rate}
+              gst={gst}
+              emiTable={emiTable}
             />
           </>
         )
