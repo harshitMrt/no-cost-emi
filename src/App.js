@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import NoCostEMI from "./components/NoCostEMI";
-import EmiTable from "./components/NoCostEmiTable";
+import NoCostEMI from "./NoCostEMI/components/NoCostEMI";
+import EmiTable from "./NoCostEMI/components/NoCostEmiTable";
 // import FinalTable from "./components/FinalData";
-import Example from "./components/ExampleNCE";
-import Comparison from "./components/NoCostVsCost";
+import Example from "./NoCostEMI/components/ExampleNCE";
+import Comparison from "./NoCostEMI/components/NoCostVsCost";
 import "./App.css";
 import { useEffect } from "react";
-import LandingPage from "./components/LandingPage";
-import Header from "./components/Header";
-import NoCostEmiSection from "./components/NoCostEmiSection";
-import Footer from "./components/Footer";
-import EMIComparison from "./components/EMIComparison";
-import Benefits from "./components/Benefits";
-import HowItWorks from "./components/HowItWorks";
+import LandingPage from "./NoCostEMI/components/LandingPage";
+import Header from "./NoCostEMI/components/Header";
+import NoCostEmiSection from "./NoCostEMI/components/NoCostEmiSection";
+import Footer from "./NoCostEMI/components/Footer";
+import EMIComparison from "./NoCostEMI/components/EMIComparison";
+import Benefits from "./NoCostEMI/components/Benefits";
+import HowItWorks from "./NoCostEMI/components/HowItWorks";
 
 function App() {
   const [costOfAsset, setCostOfAsset] = useState();
@@ -25,6 +25,8 @@ function App() {
   const [emiTable, setEmiTable] = useState([]);
   const [downPayment, setDownPayment] = useState();
   const [show, setShow] = useState(true);
+  const [loanAmount, setLoanAmount] = useState(0);
+  const [emi, setEmi] = useState(0);
 
   const [savings, setSavings] = useState(0);
 
@@ -77,8 +79,10 @@ function App() {
       {/* 2️⃣ Calculator */}
       <div className="top-section">
         <NoCostEMI
-          setCostOfAsset={setCostOfAsset}
           costOfAsset={costOfAsset}
+          setCostOfAsset={setCostOfAsset}
+          downPayment={downPayment}
+          setDownPayment={setDownPayment}
           gst={gst}
           setGST={setGST}
           tenure={tenure}
@@ -87,9 +91,10 @@ function App() {
           setRate={setRate}
           processingFee={processingFee}
           setProcessingFee={setProcessingFee}
+          updatedCostOfAsset={updatedCostOfAsset}
           setUpdatedCostOfAsset={setUpdatedCostOfAsset}
-          downPayment={downPayment}
-          setDownPayment={setDownPayment}
+          isFullyPaid={isFullyPaid}
+          setShow={setShow}
         />
 
         <EMIComparison
@@ -139,7 +144,6 @@ function App() {
 
       {/* 5️⃣ Benefits */}
       <Benefits />
-
       <Footer />
     </div>
   );
