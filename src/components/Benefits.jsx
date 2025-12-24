@@ -1,4 +1,4 @@
-import "./Benefits.css";
+import "../styles/Benefits.css";
 
 export default function Benefits() {
   return (

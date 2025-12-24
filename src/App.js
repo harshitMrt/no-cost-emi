@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import NoCostEMI from "./components/NoCostEMI";
-import EmiTable from "./components/EMItable";
+import EmiTable from "./components/NoCostEmiTable";
 // import FinalTable from "./components/FinalData";
-import Description from "./components/description";
-import Example from "./components/example";
-import Comparison from "./components/nocostVcost";
+import Example from "./components/ExampleNCE";
+import Comparison from "./components/NoCostVsCost";
 import "./App.css";
 import { useEffect } from "react";
 import LandingPage from "./components/LandingPage";

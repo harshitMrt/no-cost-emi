@@ -1,5 +1,5 @@
 import React from "react";
-import "./EMIComparison.css";
+import "../styles/EMIComparison.css";
 
 export default function EMIComparison({
   costOfAsset,

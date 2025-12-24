@@ -1,6 +1,6 @@
 import React from "react";
-import calImg from "../cal 2.jpg";
-import "./LandingPage.css";
+import calImg from "../images/cal 2.jpg";
+import "../styles/LandingPage.css";
 
 export default function LandingPage() {
   return (

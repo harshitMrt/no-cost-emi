@@ -1,5 +1,5 @@
 import React from "react";
-import "./example.css";
+import "../styles/ExampleNCE.css";
 
 export default function Example() {
   return (

@@ -1,7 +1,7 @@
-import "./NoCostEmiSection.css";
-import phone from "../phone.jpeg";
-import paper from "../paper.jpeg";
-import house from "../house.jpeg";
+import "../styles/NoCostEmiSection.css";
+import phone from "../images/phone.jpeg";
+import paper from "../images/paper.jpeg";
+import house from "../images/house.jpeg";
 
 const NoCostEmiSection = () => {
   return (

@@ -3,7 +3,7 @@ import autoTable from "jspdf-autotable";
 import React, { useEffect } from "react";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
-import "./EMITable.css";
+import "../styles/NoCostEmiTable.css";
 
 export default function EmiTable({
   downPayment,

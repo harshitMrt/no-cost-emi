@@ -1,5 +1,5 @@
 import React from "react";
-import "./NoCostEMI.css";
+import "../styles/NoCostEMI.css";
 
 export default function NoCostEMI({
   costOfAsset,
